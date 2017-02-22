@@ -14,3 +14,6 @@
 * [How to register for a Free Account - http://bit.ly/2hNfJA2](http://bit.ly/2hNfJA2)
 * [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)
 * [Microsoft Azure](https://azure.com)
+
+## Workshop 1
+* Log into [https://azureiotsuite.com](https://azureiotsuite.com)
