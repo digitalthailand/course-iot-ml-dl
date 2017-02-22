@@ -16,4 +16,4 @@
 * [Microsoft Azure](https://azure.com)
 
 ## Workshop 1
-* Log into [https://azureiotsuite.com](https://azureiotsuite.com)
+* Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
