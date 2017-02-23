@@ -22,3 +22,9 @@
 
 ## Workshop 1
 * Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
+
+## Workshop 2 - Machine Learning
+* Please follow instructions from [Machine Learning Workshop](https://tlaothong.gitbooks.io/azure-iot-workshop/content/azure-ml-studio.html)
+
+## Workshop 3 - Cognitive Services
+* Please follow instructions from [Cognitive Service Workshop](https://tlaothong.gitbooks.io/azure-iot-workshop/content/cognitive-services.html)
