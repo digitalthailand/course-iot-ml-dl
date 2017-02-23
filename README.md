@@ -14,6 +14,9 @@
 * [How to register for a Free Account - http://bit.ly/2hNfJA2](http://bit.ly/2hNfJA2)
 * [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)
 * [Microsoft Azure](https://azure.com)
+* [Azure IoT Documentation](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=iot)
+* [Microsoft IoT Cloud Platform](https://www.microsoft.com/en-us/cloud-platform/internet-of-things)
+* [Azure IoT Suite Learning Path](https://azure.microsoft.com/en-us/documentation/learning-paths/iot-suite/)
 
 ## Workshop 1
 * Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
