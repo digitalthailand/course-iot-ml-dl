@@ -19,6 +19,9 @@
 * [Azure IoT Suite Learning Path](https://azure.microsoft.com/en-us/documentation/learning-paths/iot-suite/)
 * [Azure IoT Suite - Remote Monitoring Source Code](https://github.com/Azure/azure-iot-remote-monitoring)
 * [Azure IoT Suite - Predictive Maintenance Source Code](https://github.com/Azure/azure-iot-predictive-maintenance)
+* [FEZ HAT](https://www.ghielectronics.com/catalog/product/500)
+    * [Developer's Guide](https://www.ghielectronics.com/docs/329/fez-hat-developers-guide)
+    * [Schematic (pdf)](http://www.ghielectronics.com/downloads/schematic/FEZ_HAT_SCH.pdf)
 
 ## Workshop 1
 * Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
