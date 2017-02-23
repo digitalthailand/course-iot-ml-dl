@@ -17,6 +17,8 @@
 * [Azure IoT Documentation](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=iot)
 * [Microsoft IoT Cloud Platform](https://www.microsoft.com/en-us/cloud-platform/internet-of-things)
 * [Azure IoT Suite Learning Path](https://azure.microsoft.com/en-us/documentation/learning-paths/iot-suite/)
+* [Azure IoT Suite - Remote Monitoring Source Code](https://github.com/Azure/azure-iot-remote-monitoring)
+* [Azure IoT Suite - Predictive Maintenance Source Code](https://github.com/Azure/azure-iot-predictive-maintenance)
 
 ## Workshop 1
 * Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
