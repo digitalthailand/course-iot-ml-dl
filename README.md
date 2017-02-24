@@ -37,3 +37,19 @@
 
 ## Workshop 5 - Stream Analytics to Power BI
 * Please follow instructions from [Sensor data to Power BI](https://gallery.cortanaintelligence.com/Tutorial/Sensor-Data-Analytics-with-ASA-and-Power-BI-2)
+
+## Workshop 6 - Azure Functions and Cognitive Services
+* Please follow instructions from [Fun with Azure Functions](http://martinabbott.azurewebsites.net/2016/06/11/fun-with-azure-functions-and-the-emotion-api/)
+
+## Errata
+In Workshop 4 we must use the query code as follows:
+
+```
+WITH sentiment AS (  
+  SELECT text, sentiment(text) as result from datainput  
+)  
+
+Select text, result.[Sentiment], result.[Score]  
+Into testoutput  
+From sentiment
+```
