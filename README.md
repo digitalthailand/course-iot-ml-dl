@@ -31,3 +31,9 @@
 
 ## Workshop 3 - Cognitive Services
 * Please follow instructions from [Cognitive Service Workshop](https://tlaothong.gitbooks.io/azure-iot-workshop/content/cognitive-services.html)
+
+## Workshop 4 - Stream Analytics and Azure ML
+* Please follow instructions from [Using Azure Stream Analytics and Azure Machine Learning](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-machine-learning-integration-tutorial)
+
+## Workshop 5 - Stream Analytics to Power BI
+* Please follow instructions from [Sensor data to Power BI](https://gallery.cortanaintelligence.com/Tutorial/Sensor-Data-Analytics-with-ASA-and-Power-BI-2)
