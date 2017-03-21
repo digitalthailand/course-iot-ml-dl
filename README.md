@@ -27,10 +27,14 @@
 * Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
 
 ## Workshop 2 - Machine Learning
-* Please follow instructions from [Machine Learning Workshop](https://tlaothong.gitbooks.io/azure-iot-workshop/content/azure-ml-studio.html)
+* Please follow instructions from [Machine Learning Workshop](https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-create-experiment)
+
+[//]: # (https://tlaothong.gitbooks.io/azure-iot-workshop/content/azure-ml-studio.html)
 
 ## Workshop 3 - Cognitive Services
 * Please follow instructions from [Cognitive Service Workshop](https://tlaothong.gitbooks.io/azure-iot-workshop/content/cognitive-services.html)
+
+[//]: # (https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-recommendations-quick-start)
 
 ## Workshop 4 - Stream Analytics and Azure ML
 * Please follow instructions from [Using Azure Stream Analytics and Azure Machine Learning](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-machine-learning-integration-tutorial)
