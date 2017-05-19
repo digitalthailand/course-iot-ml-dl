@@ -99,9 +99,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\DeviceInfo.cs" />
+    <Compile Include="Models\CommandHistory.cs" />
+    <Compile Include="Models\Commands\Command.cs" />
+    <Compile Include="Models\DeviceModel.cs" />
     <Compile Include="Models\DeviceProperties.cs" />
-    <Compile Include="Models\Properties\Device.cs" />
+    <Compile Include="Models\IoTHub.cs" />
+    <Compile Include="Models\Parameter.cs" />
+    <Compile Include="Models\SupportedMethod.cs" />
+    <Compile Include="Models\SystemProperties.cs" />
     <Compile Include="Models\Telemetry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,18 +1,13 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-namespace IoTSuitePiDevice.Models
+namespace Microsoft.Azure.Devices.Applications.RemoteMonitoring.Common.Models
 {
     public class Telemetry
     {
         [JsonConstructor]
         public Telemetry()
         {
-
+            
         }
 
         public Telemetry(string name, string displayName, string type)
