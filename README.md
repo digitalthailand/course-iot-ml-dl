@@ -23,6 +23,9 @@
     * [Developer's Guide](https://www.ghielectronics.com/docs/329/fez-hat-developers-guide)
     * [Schematic (pdf)](http://www.ghielectronics.com/downloads/schematic/FEZ_HAT_SCH.pdf)
 
+## Workshop 0
+* Download the source from xxx
+
 ## Workshop 1
 * Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
 
