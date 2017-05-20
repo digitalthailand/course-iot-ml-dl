@@ -16,7 +16,7 @@
 * [Microsoft Azure](https://azure.com)
 * [Azure IoT Documentation](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=iot)
 * [Windows IoT (Dev Center)](https://developer.microsoft.com/windows/iot)
-    * [Documents](https://developer.microsoft.com/windows/iot/Docs)
+    * [Documents](https://developer.microsoft.com/en-us/windows/iot/GetStarted)
 * [Microsoft IoT Cloud Platform](https://www.microsoft.com/en-us/cloud-platform/internet-of-things)
 * [Azure IoT Suite Learning Path](https://azure.microsoft.com/en-us/documentation/learning-paths/iot-suite/)
 * [Azure IoT Suite - Remote Monitoring Source Code](https://github.com/Azure/azure-iot-remote-monitoring)
