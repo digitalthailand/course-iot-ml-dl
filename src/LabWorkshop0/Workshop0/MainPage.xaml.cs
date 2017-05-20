@@ -42,11 +42,6 @@ namespace Workshop0
         {
             this.InitializeComponent();
             InitSenseHat();
-
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(50);
-            timer.Tick += Timer_Tick;
-            timer.Start();
         }
 
         private void Timer_Tick(object sender, object e)
@@ -67,6 +62,11 @@ namespace Workshop0
         {
             ISenseHat senseHat = await SenseHatFactory.GetSenseHat().ConfigureAwait(false);
             this.SenseHat = senseHat;
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(50);
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 
 
