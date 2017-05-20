@@ -27,7 +27,7 @@
 * [Microsoft IoT Samples](https://github.com/ms-iot/samples)
 
 ## Workshop 0
-* Download the source from xxx
+* Download the source from `src\LabWorkshop0`
 
 ## Workshop 1
 * Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
