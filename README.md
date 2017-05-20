@@ -22,6 +22,9 @@
 * [FEZ HAT](https://www.ghielectronics.com/catalog/product/500)
     * [Developer's Guide](https://www.ghielectronics.com/docs/329/fez-hat-developers-guide)
     * [Schematic (pdf)](http://www.ghielectronics.com/downloads/schematic/FEZ_HAT_SCH.pdf)
+* [Sense HAT](https://www.hackster.io/laserbrain/windows-iot-sense-hat)
+    * [SDK (github)](https://github.com/emmellsoft/RPi.SenseHat)
+* [Microsoft IoT Samples](https://github.com/ms-iot/samples)
 
 ## Workshop 0
 * Download the source from xxx
