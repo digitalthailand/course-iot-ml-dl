@@ -8,15 +8,17 @@ namespace WeatherTelemetry
 {
     public class SensorReader
     {
+        //public ISenseHat SenseHat;
+
         public SensorReader()
         {
             InitializeSenseHat();
         }
 
-        private async void InitializeSenseHat()
+        public async Task InitializeSenseHat()
         {
-            // TODO: Replace this statement with initialization code
-            await Task.CompletedTask;
+            //ISenseHat senseHat = await SenseHatFactory.GetSenseHat();
+            //this.SenseHat = senseHat;
         }
     }
 }

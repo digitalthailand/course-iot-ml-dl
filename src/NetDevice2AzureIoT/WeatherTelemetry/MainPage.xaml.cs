@@ -22,9 +22,32 @@ namespace WeatherTelemetry
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private IoTServiceClient iotClient;
+        private SensorReader sensor;
+
+        private DispatcherTimer timer;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            iotClient = new IoTServiceClient();
+            sensor = new SensorReader();
+
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
+        }
+
+        private async void InitThings()
+        {
+            await iotClient.InitializeIoTServiceConnection();
+            await sensor.InitializeSenseHat();
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            // TODO: Implement
         }
     }
 }

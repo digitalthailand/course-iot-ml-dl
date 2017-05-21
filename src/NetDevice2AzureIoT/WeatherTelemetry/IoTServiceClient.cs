@@ -20,10 +20,9 @@ namespace WeatherTelemetry
         public IoTServiceClient()
         {
             deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey(DeviceId, deviceKey), TransportType.Mqtt);
-            InitializeIoTServiceConnection();
         }
 
-        private async void InitializeIoTServiceConnection()
+        public async Task InitializeIoTServiceConnection()
         {
             var deviceInfo = new
             {
