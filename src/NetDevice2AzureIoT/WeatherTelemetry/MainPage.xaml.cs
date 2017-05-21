@@ -44,7 +44,7 @@ namespace WeatherTelemetry
         private async void InitThings()
         {
             await iotClient.InitializeIoTServiceConnection();
-            await sensor.InitializeSenseHat();
+            //await sensor.InitializeSenseHat();
             timer.Start();
         }
 
