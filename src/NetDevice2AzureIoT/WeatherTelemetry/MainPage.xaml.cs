@@ -32,8 +32,9 @@ namespace WeatherTelemetry
             this.InitializeComponent();
 
             iotClient = new IoTServiceClient();
-            sensor = new SensorReader();
+            //sensor = new SensorReader();
 
+            timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
         }
@@ -45,11 +46,12 @@ namespace WeatherTelemetry
             timer.Start();
         }
 
+        private Random rdm = new Random();
         private void Timer_Tick(object sender, object e)
         {
-            double temperature;
-            double humidity;
-            sensor.ReadSensors(out temperature, out humidity);
+            double temperature = 30 + rdm.NextDouble() * 15;
+            double humidity = 15 + rdm.NextDouble() * 35;
+            //sensor.ReadSensors(out temperature, out humidity);
             iotClient.SendTelemetry(temperature, humidity);
         }
     }
