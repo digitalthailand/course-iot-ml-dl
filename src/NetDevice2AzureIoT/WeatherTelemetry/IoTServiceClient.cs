@@ -49,9 +49,9 @@ namespace WeatherTelemetry
         {
             var telemetryDataPoint = new
             {
-                deviceId = DeviceId,
-                temperature = temperature,
-                humidity = humidity
+                DeviceId = DeviceId,
+                Temperature = temperature,
+                Humidity = humidity
             };
             await deviceClient.SendEventAsync(ToMessage(telemetryDataPoint));
         }
