@@ -28,6 +28,15 @@
     * [SDK (github)](https://github.com/emmellsoft/RPi.SenseHat)
 * [Microsoft IoT Samples](https://github.com/ms-iot/samples)
 
+### Lab Accelarator
+* Connect devices to IoT Hub
+    * Using Node.js
+        * [Using Node.js (simulated)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-device-management-get-started)
+        * Also [using Node.js with Raspberry Pi](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-raspberry-pi-kit-node-get-started)
+    * Using .NET
+        * [Official Guide (simulated)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-getstarted)
+        * [Using .NET (device)](how2/netdevice2iothub.md)
+
 ## Workshop 0
 * Download the source from `src\LabWorkshop0`
 
