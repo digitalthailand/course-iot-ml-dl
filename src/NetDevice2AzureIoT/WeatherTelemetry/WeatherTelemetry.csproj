@@ -129,6 +129,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Emmellsoft.IoT.RPi.SenseHat">
+      <Version>0.1.0.10</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Azure.Devices.Client">
       <Version>1.2.11</Version>
     </PackageReference>

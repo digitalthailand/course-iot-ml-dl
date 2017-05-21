@@ -47,7 +47,10 @@ namespace WeatherTelemetry
 
         private void Timer_Tick(object sender, object e)
         {
-            // TODO: Implement
+            double temperature;
+            double humidity;
+            sensor.ReadSensors(out temperature, out humidity);
+            iotClient.SendTelemetry(temperature, humidity);
         }
     }
 }
