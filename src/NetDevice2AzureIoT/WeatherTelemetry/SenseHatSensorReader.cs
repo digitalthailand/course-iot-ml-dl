@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace WeatherTelemetry
 {
-    public class SensorReader
+    public class SenseHatSensorReader : ISensorReader
     {
         public ISenseHat SenseHat;
 
-        public SensorReader()
+        public SenseHatSensorReader()
         {
         }
 
-        public async Task InitializeSenseHat()
+        public async Task InitializeHat()
         {
             ISenseHat senseHat = await SenseHatFactory.GetSenseHat();
             this.SenseHat = senseHat;

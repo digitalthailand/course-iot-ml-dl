@@ -23,7 +23,7 @@ namespace WeatherTelemetry
     public sealed partial class MainPage : Page
     {
         private IoTServiceClient iotClient;
-        private SensorReader sensor;
+        private ISensorReader sensor;
 
         private DispatcherTimer timer;
 
@@ -32,7 +32,7 @@ namespace WeatherTelemetry
             this.InitializeComponent();
 
             iotClient = new IoTServiceClient();
-            //sensor = new SensorReader();
+            sensor = new FezHatSensorReader();
 
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -44,16 +44,18 @@ namespace WeatherTelemetry
         private async void InitThings()
         {
             await iotClient.InitializeIoTServiceConnection();
-            //await sensor.InitializeSenseHat();
+            await sensor.InitializeHat();
             timer.Start();
         }
 
-        private Random rdm = new Random();
+        //private Random rdm = new Random();
         private void Timer_Tick(object sender, object e)
         {
-            double temperature = 30 + rdm.NextDouble() * 15;
-            double humidity = 15 + rdm.NextDouble() * 35;
-            //sensor.ReadSensors(out temperature, out humidity);
+            //double temperature = 30 + rdm.NextDouble() * 15;
+            //double humidity = 15 + rdm.NextDouble() * 35;
+            double temperature;
+            double humidity;
+            sensor.ReadSensors(out temperature, out humidity);
             iotClient.SendTelemetry(temperature, humidity);
         }
     }
