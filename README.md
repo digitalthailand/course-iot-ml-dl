@@ -10,6 +10,36 @@
 * [Chapter 5 - Machine Learning](slides/m05_machine_learning.pdf)
 * [Chapter 6 - Stream Analytics](slides/m06_stream_analytics.pdf)
 
+## Workshop Manual
+* [The workshop manual page](https://www.gitbook.com/book/tlaothong/azure-iot-workshop)
+
+## Workshop 1
+* [Connect Raspberry Pi to Azure IoT Hub](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-raspberry-pi-kit-node-get-started.html)
+
+## Workshop 1b
+* [Using Raspberry Pi online simulator](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-raspberry-pi-web-simulator-get-started.html)
+
+## Workshop 2
+* [Manage Cloud Device message with IoT Hub Explorer](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-explorer-cloud-device-messaging.html)
+
+## Workshop 3
+* [Save messages to Azure Storage](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-store-data-in-azure-table-storage.html)
+
+## Workshop 4
+* [Data Visualization in Power BI](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-live-data-visualization-in-power-bi.html)
+
+## Workshop 5
+* [Data Visualization with Web App](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-live-data-visualization-in-web-apps.html)
+
+## Workshop 6
+* [Weather forcast using Azure Machine Learning](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-weather-forecast-machine-learning.html)
+
+## Workshop 7
+* [Device Management using IoT Hub Explorer](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-device-management-iothub-explorer.html)
+
+## Workshop 8
+* [Remote Monitoring and Notifications](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-monitoring-notifications-with-azure-logic-apps.html)
+
 ## Useful Links
 * [How to register for a Free Account - http://bit.ly/2hNfJA2](http://bit.ly/2hNfJA2)
 * [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/)
@@ -36,41 +66,3 @@
     * Using .NET
         * [Official Guide (simulated)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-getstarted)
         * [Using .NET (device)](how2/netdevice2iothub.md)
-
-## Workshop 0
-* Download the source from `src\LabWorkshop0`
-
-## Workshop 1
-* Log into [https://www.azureiotsuite.com](https://www.azureiotsuite.com)
-
-## Workshop 2 - Machine Learning
-* Please follow instructions from [Machine Learning Workshop](https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-create-experiment)
-
-[//]: # (https://tlaothong.gitbooks.io/azure-iot-workshop/content/azure-ml-studio.html)
-
-## Workshop 3 - Cognitive Services
-* Please follow instructions from [Cognitive Service Workshop](https://tlaothong.gitbooks.io/azure-iot-workshop/content/cognitive-services.html)
-
-[//]: # (https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-recommendations-quick-start)
-
-## Workshop 4 - Stream Analytics and Azure ML
-* Please follow instructions from [Using Azure Stream Analytics and Azure Machine Learning](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-machine-learning-integration-tutorial)
-
-## Workshop 5 - Stream Analytics to Power BI
-* Please follow instructions from [Sensor data to Power BI](https://gallery.cortanaintelligence.com/Tutorial/Sensor-Data-Analytics-with-ASA-and-Power-BI-2)
-
-## Workshop 6 - Azure Functions and Cognitive Services
-* Please follow instructions from [Fun with Azure Functions](http://martinabbott.azurewebsites.net/2016/06/11/fun-with-azure-functions-and-the-emotion-api/)
-
-## Errata
-In Workshop 4 we must use the query code as follows:
-
-```
-WITH sentiment AS (  
-  SELECT text, sentiment(text) as result from datainput  
-)  
-
-Select text, result.[Sentiment], result.[Score]  
-Into testoutput  
-From sentiment
-```
