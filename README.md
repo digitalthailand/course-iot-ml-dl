@@ -1,6 +1,10 @@
 # IoT, Machine Learning and Data Analytics
 ## Course Companion
 
+> WARNING: Do not forget to DELETE your resources in your Azure Subscription!!
+
+> Digital Thailand Club: https://www.facebook.com/digitalthailandclub
+
 ## Hands-out
 * Introducing IoT
 * [Chapter 1 - Azure IoT Services](slides/m01_azure_iot.pdf)
