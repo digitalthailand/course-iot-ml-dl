@@ -1,6 +1,13 @@
 # IoT, Machine Learning and Data Analytics
 ## Course Companion
 
+> ATTENTION: Please check out http://powerbi.com (Workshop 4).
+For ones who don't have work email account (email which is not gmail or hotmail),
+please send a fb message to Digital Thailand Club after 15.00.
+I'll give you one (the email which you can use to register to the power bi).
+
+> SUGGESTION: http://github.com might be helpful for your work as a team.
+
 > WARNING: Do not forget to DELETE your resources in your Azure Subscription!!
 
 > Digital Thailand Club: https://www.facebook.com/digitalthailandclub
