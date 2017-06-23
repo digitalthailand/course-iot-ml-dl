@@ -3,6 +3,9 @@
 
 > ATTENTION: The sample data for the Eastern CodeFest can be downloaded from
 [http://tinyurl.com/eastern-codefest-sample-data](http://tinyurl.com/eastern-codefest-sample-data)
+    * [Completed Sample Data](http://tinyurl.com/yagfk28o)
+    * [Questions for Software Teams](https://easterncodefest.blob.core.windows.net/sample-data/sw.pdf)
+    * [Questions for Hardware Teams](https://easterncodefest.blob.core.windows.net/sample-data/hw.pdf)
 
 > ATTENTION: Please check out http://powerbi.com (Workshop 4).
 For ones who don't have work email account (email which is not gmail or hotmail),
