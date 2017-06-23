@@ -1,6 +1,9 @@
 # IoT, Machine Learning and Data Analytics
 ## Course Companion
 
+> ATTENTION: The sample data for the Eastern CodeFest can be downloaded from
+[http://tinyurl.com/eastern-codefest-sample-data](http://tinyurl.com/eastern-codefest-sample-data)
+
 > ATTENTION: Please check out http://powerbi.com (Workshop 4).
 For ones who don't have work email account (email which is not gmail or hotmail),
 please send a fb message to Digital Thailand Club after 15.00.
