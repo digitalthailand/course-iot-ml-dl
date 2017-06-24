@@ -30,6 +30,12 @@ I'll give you one (the email which you can use to register to the power bi).
 1. Use the Raspberry Pi web simulator
 1. Use the following hack page for testing [http://easterncodefest.azurewebsites.net/](http://easterncodefest.azurewebsites.net/)
 
+**Q:** How to embed a Power BI Dashboard into the web app?  
+**A:** Please check out the following links  
+* [Power BI Client](https://microsoft.github.io/PowerBI-JavaScript/)
+* [Integrate a dashboard into an app](https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-integrate-dashboard/)
+* [Power BI Command line tool](https://github.com/Microsoft/PowerBI-cli)
+
 ## Hands-out
 * Introducing IoT
 * [Chapter 1 - Azure IoT Services](slides/m01_azure_iot.pdf)
