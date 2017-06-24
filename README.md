@@ -3,9 +3,9 @@
 
 > ATTENTION: The sample data for the Eastern CodeFest can be downloaded from
 [http://tinyurl.com/eastern-codefest-sample-data](http://tinyurl.com/eastern-codefest-sample-data)
-    * [Completed Sample Data](http://tinyurl.com/yagfk28o)
-    * [Questions for Software Teams](https://easterncodefest.blob.core.windows.net/sample-data/sw.pdf)
-    * [Questions for Hardware Teams](https://easterncodefest.blob.core.windows.net/sample-data/hw.pdf)
+* [Completed Sample Data](http://tinyurl.com/yagfk28o)
+* [Questions for Software Teams](https://easterncodefest.blob.core.windows.net/sample-data/sw.pdf)
+* [Questions for Hardware Teams](https://easterncodefest.blob.core.windows.net/sample-data/hw.pdf)
 
 > ATTENTION: Please check out http://powerbi.com (Workshop 4).
 For ones who don't have work email account (email which is not gmail or hotmail),
@@ -17,6 +17,18 @@ I'll give you one (the email which you can use to register to the power bi).
 > WARNING: Do not forget to DELETE your resources in your Azure Subscription!!
 
 > Digital Thailand Club: https://www.facebook.com/digitalthailandclub
+
+## FAQ
+**Q:** Can I use Power BI in my application (XAML-based)?  
+**A:** Yes, please check out these links for more info  
+* [Power BI in UWP](http://community.powerbi.com/t5/Desktop/Power-BI-Embedded-Integrate-a-report-into-a-UWP-app/td-p/59360)
+* [Using Power BI in WebView](https://gist.github.com/itsananderson/14a179174ea65e246ce7)
+
+**Q:** Is there any quick and easy way to simulate the IoT Device use for the problems in `Eastern CodeFest`?  
+**A:** Yes there're a couple of suggestions:
+1. Use iothub-explorer
+1. Use the Raspberry Pi web simulator
+1. Use the following hack page for testing [http://easterncodefest.azurewebsites.net/](http://easterncodefest.azurewebsites.net/)
 
 ## Hands-out
 * Introducing IoT
