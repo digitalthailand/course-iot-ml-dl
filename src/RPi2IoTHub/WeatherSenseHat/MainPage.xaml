@@ -8,6 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="lblMessage" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Starting ..." VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

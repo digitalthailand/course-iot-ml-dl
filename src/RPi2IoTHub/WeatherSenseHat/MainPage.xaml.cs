@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Emmellsoft.IoT.Rpi.SenseHat;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,47 @@ namespace WeatherSenseHat
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ISenseHat SenseHat;
+        public DispatcherTimer timer;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            InitSenseHat();
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
         }
+
+        private async void InitSenseHat()
+        {
+            ISenseHat senseHat = await SenseHatFactory.GetSenseHat();
+            this.SenseHat = senseHat;
+
+            SenseHat.Display.Clear();
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            var hat = SenseHat;
+
+            hat.Sensors.HumiditySensor.Update();
+
+            if (hat.Sensors.Humidity.HasValue && hat.Sensors.Temperature.HasValue)
+            {
+                var hum = hat.Sensors.Humidity.Value;
+                var tem = hat.Sensors.Temperature.Value;
+
+                lblMessage.Text = string.Format("Humidity: {0:N}, Temperature: {1:N}", hum, tem);
+            }
+            else
+            {
+                lblMessage.Text = "Updating ...";
+            }
+        }
+
     }
 }
