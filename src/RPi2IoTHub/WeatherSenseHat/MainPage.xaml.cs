@@ -26,6 +26,8 @@ namespace WeatherSenseHat
         private ISenseHat SenseHat;
         public DispatcherTimer timer;
 
+        private IoTServiceClient iotClient = new IoTServiceClient();
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -41,6 +43,8 @@ namespace WeatherSenseHat
         {
             ISenseHat senseHat = await SenseHatFactory.GetSenseHat();
             this.SenseHat = senseHat;
+
+            await iotClient.InitializeIoTServiceConnection();
 
             SenseHat.Display.Clear();
             timer.Start();
@@ -58,6 +62,7 @@ namespace WeatherSenseHat
                 var tem = hat.Sensors.Temperature.Value;
 
                 lblMessage.Text = string.Format("Humidity: {0:N}, Temperature: {1:N}", hum, tem);
+                iotClient.SendTelemetry(tem, hum);
             }
             else
             {
