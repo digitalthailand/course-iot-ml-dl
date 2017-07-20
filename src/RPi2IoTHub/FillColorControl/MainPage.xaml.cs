@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Emmellsoft.IoT.Rpi.SenseHat;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,36 @@ namespace FillColorControl
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ISenseHat SenseHat;
+
+        private IoTServiceClient iotClient;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            iotClient = new IoTServiceClient(SetFillColor);
+
+            InitSenseHat();
+        }
+
+        private async void InitSenseHat()
+        {
+            ISenseHat senseHat = await SenseHatFactory.GetSenseHat();
+            this.SenseHat = senseHat;
+
+            await iotClient.InitializeIoTServiceConnection();
+
+            SenseHat.Display.Clear();
+            SenseHat.Display.Fill(Windows.UI.Colors.Black);
+            SenseHat.Display.Update();
+        }
+
+        private void SetFillColor(Windows.UI.Color color)
+        {
+            SenseHat.Display.Clear();
+            SenseHat.Display.Fill(color);
+            SenseHat.Display.Update();
         }
     }
 }
