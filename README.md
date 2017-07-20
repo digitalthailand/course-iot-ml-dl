@@ -95,6 +95,7 @@ I'll give you one (the email which you can use to register to the power bi).
 * [Sense HAT](https://www.hackster.io/laserbrain/windows-iot-sense-hat)
     * [SDK (github)](https://github.com/emmellsoft/RPi.SenseHat)
 * [Microsoft IoT Samples](https://github.com/ms-iot/samples)
+* [Using Webcam in UWP (also Raspberry Pi)](https://developer.microsoft.com/en-us/windows/iot/samples/webcamapp)
 
 ### Lab Accelarator
 * Connect devices to IoT Hub
