@@ -1,6 +1,9 @@
 # IoT, Machine Learning and Data Analytics
 ## Course Companion
 
+> ATTENTION: SAS Key
+HostName=labrealdevice1.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=9cHajFi7QxDrl+8+KRafEJueW16OGcF4mSUtdYxn/vI=
+
 > ATTENTION: The sample data for the Eastern CodeFest can be downloaded from
 [http://tinyurl.com/eastern-codefest-sample-data](http://tinyurl.com/eastern-codefest-sample-data)
 * [Completed Sample Data](http://tinyurl.com/yagfk28o)
