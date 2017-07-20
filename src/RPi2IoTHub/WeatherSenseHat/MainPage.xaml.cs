@@ -26,11 +26,13 @@ namespace WeatherSenseHat
         private ISenseHat SenseHat;
         public DispatcherTimer timer;
 
-        private IoTServiceClient iotClient = new IoTServiceClient();
+        private IoTServiceClient iotClient;
 
         public MainPage()
         {
             this.InitializeComponent();
+
+            iotClient = new IoTServiceClient();
 
             InitSenseHat();
 
@@ -41,10 +43,10 @@ namespace WeatherSenseHat
 
         private async void InitSenseHat()
         {
+            await iotClient.InitializeIoTServiceConnection();
+
             ISenseHat senseHat = await SenseHatFactory.GetSenseHat();
             this.SenseHat = senseHat;
-
-            await iotClient.InitializeIoTServiceConnection();
 
             SenseHat.Display.Clear();
             timer.Start();
