@@ -51,6 +51,9 @@ I'll give you one (the email which you can use to register to the power bi).
 ## Workshop Manual
 * [The workshop manual page](https://www.gitbook.com/book/tlaothong/azure-iot-workshop)
 
+## Workshop 0
+* [Azure IoT Suite](http://www.azureiotsuite.com/)
+
 ## Workshop 1
 * [Connect Raspberry Pi to Azure IoT Hub](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-raspberry-pi-kit-node-get-started.html)
 
