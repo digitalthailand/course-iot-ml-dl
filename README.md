@@ -72,6 +72,9 @@ I'll give you one (the email which you can use to register to the power bi).
 ## Workshop 5
 * [Data Visualization with Web App](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-live-data-visualization-in-web-apps.html)
 
+## Workshop 6a
+* [Machine Learning Experiment](https://docs.microsoft.com/en-us/azure/machine-learning/studio/create-experiment)
+
 ## Workshop 6
 * [Weather forcast using Azure Machine Learning](https://tlaothong.gitbooks.io/azure-iot-workshop/content/iot-hub-weather-forecast-machine-learning.html)
 
