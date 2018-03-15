@@ -131,7 +131,7 @@
       <Version>0.1.0.10</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Devices.Client">
-      <Version>1.7.0</Version>
+      <Version>1.5.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.8</Version>

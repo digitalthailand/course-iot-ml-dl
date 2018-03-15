@@ -25,9 +25,7 @@ namespace SenseHatWeatherStation
         {
             this.InitializeComponent();
 
-            Trace.WriteLine("###>>> Starting MainPage ...");
-
-            client = DeviceClient.CreateFromConnectionString(ConnectionString, TransportType.Http1);
+            client = DeviceClient.CreateFromConnectionString(ConnectionString, TransportType.Mqtt);
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMilliseconds(500);
             timer.Tick += Timer_Tick;
