@@ -16,6 +16,7 @@ using Microsoft.Azure.Devices.Client;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using Emmellsoft.IoT.Rpi.SenseHat;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -28,6 +29,7 @@ namespace SenseHatWeatherStation
     {
         private const string ConnectionString = "HostName=st09iot.azure-devices.net;DeviceId=d2;SharedAccessKey=NTDX5Em6XhCP4yXDjVVNSyINPnm0DhKEK3XZjfbOc0A=";
         private DeviceClient client;
+        private ISenseHat senseHat;
 
         public MainPage()
         {
@@ -41,8 +43,15 @@ namespace SenseHatWeatherStation
 
         async Task InitDevice()
         {
+            // Init SenseHat
+            senseHat = await SenseHatFactory.GetSenseHat();
+            // Show that sense hat has been init.
+            senseHat.Display.Fill(Windows.UI.Colors.Black);
+            senseHat.Display.Update();
+
+            // Connect to IoT Hub
             await client.OpenAsync();
-            await SendMessage(30, 37);
+            //await SendMessage(30, 37);
         }
 
         public async Task SendMessage(double temperature, double humidity)
