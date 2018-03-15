@@ -27,7 +27,7 @@ namespace SenseHatWeatherStation
 
             Trace.WriteLine("###>>> Starting MainPage ...");
 
-            client = DeviceClient.CreateFromConnectionString(ConnectionString, TransportType.Mqtt);
+            client = DeviceClient.CreateFromConnectionString(ConnectionString, TransportType.Http1);
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMilliseconds(500);
             timer.Tick += Timer_Tick;
@@ -95,7 +95,7 @@ namespace SenseHatWeatherStation
                 Temperature = temperature,
                 Humidity = humidity
             };
-            var formattedM2Send = JsonConvert.ToString(m2send);
+            var formattedM2Send = JsonConvert.SerializeObject(m2send);
             var msgBody = System.Text.UTF8Encoding.UTF8.GetBytes(formattedM2Send);
             var message = new Message(msgBody);
 
