@@ -30,6 +30,7 @@ namespace SenseHatWeatherStation
         private const string ConnectionString = "HostName=st09iot.azure-devices.net;DeviceId=d2;SharedAccessKey=NTDX5Em6XhCP4yXDjVVNSyINPnm0DhKEK3XZjfbOc0A=";
         private DeviceClient client;
         private ISenseHat senseHat;
+        private DispatcherTimer timer;
 
         public MainPage()
         {
@@ -38,7 +39,48 @@ namespace SenseHatWeatherStation
             Trace.WriteLine("###>>> Starting MainPage ...");
 
             client = DeviceClient.CreateFromConnectionString(ConnectionString, TransportType.Mqtt);
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(500);
+            timer.Tick += Timer_Tick;
             InitDevice(); //.GetAwaiter(); //.GetResult();  // do not wait here
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            Telemetry();
+            blinkSenseHat();
+        }
+
+        private bool isOn = false;
+        private void blinkSenseHat()
+        {
+            if (senseHat == null)
+            {
+                return;
+            }
+
+            if (isOn)
+            {
+                senseHat.Display.Screen[0, 0] = Windows.UI.Colors.Green;
+            }
+            else
+            {
+                senseHat.Display.Screen[0, 0] = Windows.UI.Colors.Black;
+            }
+            isOn = !isOn;
+
+            senseHat.Display.Update();
+        }
+
+        private async Task Telemetry()
+        {
+            if (senseHat.Sensors.HumiditySensor.Update())
+            {
+                var hum = senseHat.Sensors.Humidity ?? 0;
+                var tem = senseHat.Sensors.Temperature ?? 0;
+
+                await SendMessage(tem, hum);
+            }
         }
 
         async Task InitDevice()
@@ -51,7 +93,9 @@ namespace SenseHatWeatherStation
 
             // Connect to IoT Hub
             await client.OpenAsync();
-            //await SendMessage(30, 37);
+
+            // start timer
+            timer.Start();
         }
 
         public async Task SendMessage(double temperature, double humidity)
