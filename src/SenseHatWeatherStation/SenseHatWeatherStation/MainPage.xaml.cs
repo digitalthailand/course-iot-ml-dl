@@ -42,19 +42,66 @@ namespace SenseHatWeatherStation
             senseHat.Display.Update();
 
             // Connect to IoT Hub
+            await client.SetMethodHandlerAsync("start",
+                StartTelemetry, null);
+            await client.SetMethodHandlerAsync("stop",
+                StopTelemetry, null);
+            await client.SetMethodHandlerAsync("change",
+                ChangeColor, null);
             await client.OpenAsync();
 
             // start timer
             timer.Start();
         }
 
+        Task<MethodResponse> StartTelemetry(MethodRequest req, object context)
+        {
+            isEnable = true;
+            return Task.FromResult(new MethodResponse(0));
+        }
+
+        Task<MethodResponse> StopTelemetry(MethodRequest req, object context)
+        {
+            isEnable = false;
+            return Task.FromResult(new MethodResponse(1));
+        }
+
+        Task<MethodResponse> ChangeColor(MethodRequest req, object context)
+        {
+            var json = JsonConvert.DeserializeObject<ChangeColorModel>(req.DataAsJson);
+            switch (json.color)
+            {
+                case "red":
+                    blinkColor = Colors.Red;
+                    break;
+                case "orange":
+                    blinkColor = Colors.Orange;
+                    break;
+                default:
+                    blinkColor = Colors.Green;
+                    break;
+            }
+            return Task.FromResult(new MethodResponse(200));
+        }
+
+        public class ChangeColorModel
+        {
+            public string color { get; set; }
+        }
+
         private void Timer_Tick(object sender, object e)
         {
+            if (!isEnable && !isOn)
+            {
+                return;
+            }
             Telemetry();
             blinkSenseHat();
         }
 
+        private bool isEnable = true;
         private bool isOn = false;
+        Color blinkColor = Colors.Green;
         private void blinkSenseHat()
         {
             if (senseHat == null)
@@ -64,7 +111,7 @@ namespace SenseHatWeatherStation
 
             if (isOn)
             {
-                senseHat.Display.Screen[0, 0] = Colors.Green;
+                senseHat.Display.Screen[0, 0] = blinkColor;
             }
             else
             {
