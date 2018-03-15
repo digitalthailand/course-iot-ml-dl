@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -32,6 +33,21 @@ namespace SenseHatWeatherStation
             InitDevice(); //.GetAwaiter(); //.GetResult();  // do not wait here
         }
 
+        async Task InitDevice()
+        {
+            // Init SenseHat
+            senseHat = await SenseHatFactory.GetSenseHat();
+            // Show that sense hat has been init.
+            senseHat.Display.Fill(Colors.Black);
+            senseHat.Display.Update();
+
+            // Connect to IoT Hub
+            await client.OpenAsync();
+
+            // start timer
+            timer.Start();
+        }
+
         private void Timer_Tick(object sender, object e)
         {
             Telemetry();
@@ -48,11 +64,11 @@ namespace SenseHatWeatherStation
 
             if (isOn)
             {
-                senseHat.Display.Screen[0, 0] = Windows.UI.Colors.Green;
+                senseHat.Display.Screen[0, 0] = Colors.Green;
             }
             else
             {
-                senseHat.Display.Screen[0, 0] = Windows.UI.Colors.Black;
+                senseHat.Display.Screen[0, 0] = Colors.Black;
             }
             isOn = !isOn;
 
@@ -68,21 +84,6 @@ namespace SenseHatWeatherStation
 
                 await SendMessage(tem, hum);
             }
-        }
-
-        async Task InitDevice()
-        {
-            // Init SenseHat
-            senseHat = await SenseHatFactory.GetSenseHat();
-            // Show that sense hat has been init.
-            senseHat.Display.Fill(Windows.UI.Colors.Black);
-            senseHat.Display.Update();
-
-            // Connect to IoT Hub
-            await client.OpenAsync();
-
-            // start timer
-            timer.Start();
         }
 
         public async Task SendMessage(double temperature, double humidity)
