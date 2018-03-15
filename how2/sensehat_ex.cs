@@ -15,7 +15,7 @@ namespace DemoSenseHat
         private Emmellsoft.IoT.Rpi.SenseHat.ISenseHat hat;
         private Microsoft.Azure.Devices.Client.DeviceClient device;
 
-        private const string DeviceConnectionString = "HostName=prelab.azure-devices.net;DeviceId=spi;SharedAccessKey=n8wt6OghOciC5hiaBVOwmfUTuASJTywS7gy4t1ad2Ec=";
+        private const string DeviceConnectionString = "<device connection string>";
 
         public MainPage()
         {
