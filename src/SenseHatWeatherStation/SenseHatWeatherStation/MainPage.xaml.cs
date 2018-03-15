@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using Emmellsoft.IoT.Rpi.SenseHat;
+using Microsoft.Azure.Devices.Client;
+using Newtonsoft.Json;
+using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Microsoft.Azure.Devices.Client;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.Diagnostics;
-using Emmellsoft.IoT.Rpi.SenseHat;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -27,7 +16,7 @@ namespace SenseHatWeatherStation
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private const string ConnectionString = "HostName=st09iot.azure-devices.net;DeviceId=d2;SharedAccessKey=NTDX5Em6XhCP4yXDjVVNSyINPnm0DhKEK3XZjfbOc0A=";
+        private const string ConnectionString = "<Your device connections string>";
         private DeviceClient client;
         private ISenseHat senseHat;
         private DispatcherTimer timer;
@@ -74,7 +63,7 @@ namespace SenseHatWeatherStation
 
         private async Task Telemetry()
         {
-            if (senseHat.Sensors.HumiditySensor.Update())
+            if (isOn && senseHat.Sensors.HumiditySensor.Update())
             {
                 var hum = senseHat.Sensors.Humidity ?? 0;
                 var tem = senseHat.Sensors.Temperature ?? 0;
