@@ -1,22 +1,6 @@
 # IoT, Machine Learning and Data Analytics
 ## Course Companion
 
-> ATTENTION: SAS Key:  
-HostName=labrealdevice1.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=9cHajFi7QxDrl+8+KRafEJueW16OGcF4mSUtdYxn/vI=
-
-> ATTENTION: The sample data for the Eastern CodeFest can be downloaded from
-[http://tinyurl.com/eastern-codefest-sample-data](http://tinyurl.com/eastern-codefest-sample-data)
-* [Completed Sample Data](http://tinyurl.com/yagfk28o)
-* [Questions for Software Teams](https://easterncodefest.blob.core.windows.net/sample-data/sw.pdf)
-* [Questions for Hardware Teams](https://easterncodefest.blob.core.windows.net/sample-data/hw.pdf)
-
-> ATTENTION: Please check out http://powerbi.com (Workshop 4).
-For ones who don't have work email account (email which is not gmail or hotmail),
-please send a fb message to Digital Thailand Club after 15.00.
-I'll give you one (the email which you can use to register to the power bi).
-
-> SUGGESTION: http://github.com might be helpful for your work as a team.
-
 > WARNING: Do not forget to DELETE your resources in your Azure Subscription!!
 
 > Digital Thailand Club: https://www.facebook.com/digitalthailandclub
@@ -95,9 +79,9 @@ I'll give you one (the email which you can use to register to the power bi).
 * [Azure IoT Suite Learning Path](https://azure.microsoft.com/en-us/documentation/learning-paths/iot-suite/)
 * [Azure IoT Suite - Remote Monitoring Source Code](https://github.com/Azure/azure-iot-remote-monitoring)
 * [Azure IoT Suite - Predictive Maintenance Source Code](https://github.com/Azure/azure-iot-predictive-maintenance)
-* [FEZ HAT](https://www.ghielectronics.com/catalog/product/500)
-    * [Developer's Guide](https://www.ghielectronics.com/docs/329/fez-hat-developers-guide)
-    * [Schematic (pdf)](http://www.ghielectronics.com/downloads/schematic/FEZ_HAT_SCH.pdf)
+* [FEZ HAT](https://old.ghielectronics.com/catalog/product/500)
+    * [Developer's Guide](https://old.ghielectronics.com/docs/329/fez-hat-developers-guide)
+    * [Schematic (pdf)](http://old.ghielectronics.com/downloads/schematic/FEZ_HAT_SCH.pdf)
 * [Sense HAT](https://www.hackster.io/laserbrain/windows-iot-sense-hat)
     * [SDK (github)](https://github.com/emmellsoft/RPi.SenseHat)
 * [Microsoft IoT Samples](https://github.com/ms-iot/samples)
