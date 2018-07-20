@@ -1,22 +1,6 @@
 # IoT, Machine Learning and Data Analytics
 ## Course Companion
 
-> ATTENTION: SAS Key:  
-HostName=labrealdevice1.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=9cHajFi7QxDrl+8+KRafEJueW16OGcF4mSUtdYxn/vI=
-
-> ATTENTION: The sample data for the Eastern CodeFest can be downloaded from
-[http://tinyurl.com/eastern-codefest-sample-data](http://tinyurl.com/eastern-codefest-sample-data)
-* [Completed Sample Data](http://tinyurl.com/yagfk28o)
-* [Questions for Software Teams](https://easterncodefest.blob.core.windows.net/sample-data/sw.pdf)
-* [Questions for Hardware Teams](https://easterncodefest.blob.core.windows.net/sample-data/hw.pdf)
-
-> ATTENTION: Please check out http://powerbi.com (Workshop 4).
-For ones who don't have work email account (email which is not gmail or hotmail),
-please send a fb message to Digital Thailand Club after 15.00.
-I'll give you one (the email which you can use to register to the power bi).
-
-> SUGGESTION: http://github.com might be helpful for your work as a team.
-
 > WARNING: Do not forget to DELETE your resources in your Azure Subscription!!
 
 > Digital Thailand Club: https://www.facebook.com/digitalthailandclub
