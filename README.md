@@ -83,6 +83,7 @@
     * [Developer's Guide](https://old.ghielectronics.com/docs/329/fez-hat-developers-guide)
     * [Schematic (pdf)](http://old.ghielectronics.com/downloads/schematic/FEZ_HAT_SCH.pdf)
 * [Sense HAT](https://www.hackster.io/laserbrain/windows-iot-sense-hat)
+    * [Product Page](https://www.raspberrypi.org/products/sense-hat/)
     * [SDK (github)](https://github.com/emmellsoft/RPi.SenseHat)
 * [Microsoft IoT Samples](https://github.com/ms-iot/samples)
 * [Using Webcam in UWP (also Raspberry Pi)](https://developer.microsoft.com/en-us/windows/iot/samples/webcamapp)
