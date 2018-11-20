@@ -89,6 +89,7 @@
 * [Using Webcam in UWP (also Raspberry Pi)](https://developer.microsoft.com/en-us/windows/iot/samples/webcamapp)
 
 ### Lab Accelarator
+* [Quick Start](how2/quickstart.md)
 * Connect devices to IoT Hub
     * Using Node.js
         * [Using Node.js (simulated)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-device-management-get-started)
