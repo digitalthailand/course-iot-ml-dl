@@ -58,3 +58,51 @@
         }
     }
     ```
+
+### Sense Hat
+
+```csharp
+public sealed partial class MainPage : Page
+{
+    private ISenseHat hat;
+    private DispatcherTimer timer = new DispatcherTimer();
+
+    public MainPage()
+    {
+        this.InitializeComponent();
+
+        timer.Interval = TimeSpan.FromSeconds(0.5);
+        timer.Tick += Timer_Tick;
+
+        InitDevice().GetAwaiter();
+    }
+
+    public async Task InitDevice()
+    {
+        var hat = await SenseHatFactory.GetSenseHat().ConfigureAwait(false);
+
+        hat.Display.Fill(Windows.UI.Colors.BlueViolet);
+        hat.Display.Update();
+        this.hat = hat;
+
+        //await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,
+        //    () =>
+        //    {
+                this.timer.Start();
+            //});
+    }
+
+    private bool ToggleOn;
+    private void Timer_Tick(object sender, object e)
+    {
+        var color = ToggleOn 
+            ? Windows.UI.Colors.Gold 
+            : Windows.UI.Colors.Black;
+        ToggleOn = !ToggleOn;
+
+        hat.Display.Fill(color);
+        hat.Display.Update();
+    }
+}
+```
+
