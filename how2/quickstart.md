@@ -106,3 +106,43 @@ public sealed partial class MainPage : Page
 }
 ```
 
+### Sending Telemetry Events
+
+```csharp
+private DeviceClient hubClient;
+private async Task ConnectIoTHub()
+{
+    hubClient = DeviceClient.CreateFromConnectionString(
+        "[Your IoT hub device connection string]",
+        TransportType.Mqtt);
+    await hubClient.OpenAsync();
+}
+private void SendTelemetry(object data)
+{
+    var json = Newtonsoft.Json.JsonConvert.SerializeObject(data);
+    var message = new Message(Encoding.UTF8.GetBytes(json));
+    hubClient.SendEventAsync(message);
+}
+```
+
+### Cleaning Up Resource Usage
+
+Unloaded Sample:
+
+```csharp
+private void MainPage_Unloaded(object sender, RoutedEventArgs e)
+{
+    hat?.Dispose();
+    if (hubClient != null)
+    {
+        hubClient.CloseAsync().ContinueWith(task =>
+        {
+            hubClient.Dispose();
+        });
+    }
+    else
+    {
+        hubClient.Dispose();
+    }
+}
+```
