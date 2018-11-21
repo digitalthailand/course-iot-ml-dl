@@ -98,3 +98,4 @@
     * Using .NET
         * [Official Guide (simulated)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-getstarted)
         * [Using .NET (device)](how2/netdevice2iothub.md)
+* WEBSITE_NODE_DEFAULT_VERSION
