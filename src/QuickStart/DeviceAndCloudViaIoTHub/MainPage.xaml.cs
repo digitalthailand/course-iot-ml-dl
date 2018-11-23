@@ -66,6 +66,8 @@ namespace DeviceAndCloudViaIoTHub
             hat.Display.Update();
             this.hat = hat;
 
+            await ConnectIoTHub();
+
             await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,
                 () =>
                 {
