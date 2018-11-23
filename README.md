@@ -85,6 +85,8 @@
 * [Sense HAT](https://www.hackster.io/laserbrain/windows-iot-sense-hat)
     * [Product Page](https://www.raspberrypi.org/products/sense-hat/)
     * [SDK (github)](https://github.com/emmellsoft/RPi.SenseHat)
+* [Grove Pi](https://github.com/DexterInd/GrovePi)
+    * [C# Sample](https://github.com/DexterInd/GrovePi/tree/master/Software/CSharp)
 * [Microsoft IoT Samples](https://github.com/ms-iot/samples)
 * [Azure IoT Samples for Csharp (.NET)](https://github.com/Azure-Samples/azure-iot-samples-csharp)
 * [Using Webcam in UWP (also Raspberry Pi)](https://developer.microsoft.com/en-us/windows/iot/samples/webcamapp)
